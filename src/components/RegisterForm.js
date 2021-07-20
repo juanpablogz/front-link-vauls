@@ -2,11 +2,13 @@ import React, { Fragment } from "react";
 import { Row, Col, Form, Input, Button, Divider } from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import "../assets/form.css";
+import useAuth from "../auth/useAuth";
 
-export const RegisterForm = ({register}) => {
-  const onFinish = (values) => {
-    console.log("Success:", values);
-    register(values)
+export const RegisterForm = () => {
+  const {register, logout} = useAuth();
+  const onFinish = (user) => {
+    console.log("Success:", user);
+    register(user)
   };
 
   const onFinishFailed = (errorInfo) => {

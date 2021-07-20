@@ -1,11 +1,14 @@
 import './App.css';
 import "antd/dist/antd.css";
 import AppRouter from './routers/AppRouter';
+import AuthProvider from './auth/AuthProvider';
 
 function App() {
   return (
     <div className="App">
-      <AppRouter/>
+      <AuthProvider>
+        <AppRouter/>
+      </AuthProvider>
     </div>
   );
 }
