@@ -7,7 +7,7 @@ import { Register } from './pages/Register'
 export default function AppRouter() {
   return (
     <Router>
-      <Navbar/>
+      {/* <Navbar/> */}
       <Switch>
         <Route exact path="/" component={index}/>
         <Route exact path="/register" component={Register}/>

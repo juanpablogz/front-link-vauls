@@ -1,0 +1,88 @@
+h1 {
+  color: red;
+}
+.gutter-box {
+  padding: 8px 0;
+  background: #00a0e9;
+}
+.ant-input-affix-wrapper {
+  border: none;
+  border-radius: 5px;
+  background: #F5F6F8;
+}
+.ant-input-prefix {
+  background: #F5F6F8;
+}
+.ant-input {
+  background: #F5F6F8;
+}
+.ant-btn-lg {
+  width: 100%;
+  border-radius: 10px;
+}
+.ant-input-prefix {
+  font-weight: normal;
+}
+.container-form {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 100vh;
+}
+.title-form {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 280px) {
+  .form {
+    min-width: 200px;
+  }
+  .img {
+    width: 100%;
+    height: 30vh;
+    object-fit: cover;
+  }
+  .logo {
+    width: 120px;
+    margin-top: 0px
+  }
+}
+@media (min-width: 320px) {
+  .form {
+    min-width: 300px;
+  }
+  .container-form {
+    margin-top: 20px;
+  }
+
+}
+@media (min-width: 360px) {
+
+}
+@media (min-width: 575px) {
+  .img {
+    width: 100%;
+    height: 100vh;
+  }
+  .form {
+    min-width: 380px;
+  }
+}
+@media (min-width: 1024px) {
+  .img {
+    width: 100%;
+    height: 100vh;
+  }
+  .form {
+    min-width: 600px;
+  }
+  .container-form {
+    align-items: center;
+    margin-top: 0px;
+  }
+  .logo {
+    position: absolute;
+    margin-top: -45px;
+    width: 170px;
+  }
+}
