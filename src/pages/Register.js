@@ -1,7 +1,8 @@
 import axios from 'axios';
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom';
-import { RegisterForm } from './components/RegisterForm';
+import { RegisterForm } from '../components/RegisterForm';
+
 
 export const Register = () => {
   const [headers, setHeaders] = useState([])
@@ -21,7 +22,6 @@ export const Register = () => {
       console.log(headers)
       history.push("/")
     } catch (error) {
-      console.log('entre')
       console.log(error)
     }
   }
@@ -29,29 +29,3 @@ export const Register = () => {
       <RegisterForm register={register}/>
   )
 }
-
-// import axios from 'axios';
-// import React, { useState } from 'react'
-// import { RegisterForm } from './components/RegisterForm';
-
-// export const Register = () => {
-//   const [headers, setHeaders] = useState([])
-//   const register = (value) => {
-//     let user = {
-//       "email": value.Email,
-//       "password": value.password,
-//       "username": value.Username
-//     }
-//    axios.post('http://127.0.0.1:3000/api/v1/users', {user})
-//     .then(res => {
-//       console.log(res)
-//     })
-//   }
-//   const handleLogin = (res) => {
-//     setHeaders(res.headers)
-//     console.log(headers)
-//   }
-//   return (
-//       <RegisterForm register={register}/>
-//   )
-// }

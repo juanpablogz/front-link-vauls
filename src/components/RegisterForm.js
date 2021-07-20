@@ -1,7 +1,7 @@
 import React, { Fragment } from "react";
 import { Row, Col, Form, Input, Button, Divider } from "antd";
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import "../../assets/form.css";
+import "../assets/form.css";
 
 export const RegisterForm = ({register}) => {
   const onFinish = (values) => {
