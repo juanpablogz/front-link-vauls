@@ -5,19 +5,19 @@ import "../assets/form.css";
 import useAuth from "../auth/useAuth";
 import { useHistory } from "react-router-dom";
 
-export const RegisterForm = () => {
-  const {register, logout} = useAuth();
+export const LoginForm = () => {
+  const {login, logout} = useAuth();
   const history = useHistory();
   const onFinish = (user) => {
     console.log("Success:", user);
-    register(user)
+    login(user)
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
   const handleRedirect = () => {
-    history.push('/login')
+    history.push('/register')
   }
   return (
     <Fragment>
@@ -32,18 +32,8 @@ export const RegisterForm = () => {
               onFinish={onFinish}
               onFinishFailed={onFinishFailed}
             >
-            <h2 className="title-form">Create an account for free</h2>
-              <Form.Item name="Username"
-                rules={[
-                  {
-                    required: true,
-                    message: "Please input your Username!",
-                  },
-                ]}
-              >
-                <Input placeholder="Username" prefix={"linkvaul/"}  size="large"   />
-              </Form.Item>
-
+            <h2 className="title-form">Sign in to your Linkvauls account</h2>
+  
               <Form.Item name="Email"
                 rules={[
                   {

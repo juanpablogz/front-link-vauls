@@ -32,7 +32,21 @@ h1 {
 .title-form {
   margin-bottom: 40px;
 }
+p {
+  cursor: pointer
+}
+#logo {
+  -webkit-animation: rotation 2s infinite linear;
+}
 
+@-webkit-keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg);
+  }
+  to {
+      -webkit-transform: rotate(359deg);
+  }
+}
 @media (min-width: 280px) {
   .form {
     min-width: 200px;

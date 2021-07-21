@@ -30,7 +30,23 @@ const AuthProvider = ({ children }) => {
       const response = await axios.post("http://127.0.0.1:3000/api/v1/users/", {user});
       console.log(response);
       setUser(response.headers)
-      history.push("/");
+      history.push("/home");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const login = async (values) => {
+    let user = {
+      email: values.Email,
+      password: values.password
+    };
+    console.log(user);
+    try {
+      const response = await axios.post("http://127.0.0.1:3000/api/v1/users/sign_in", {user} );
+      console.log(response);
+      setUser(response.headers)
+      history.push("/home");
     } catch (error) {
       console.log(error);
     }
@@ -39,6 +55,7 @@ const AuthProvider = ({ children }) => {
   const contextValue = {
     user,
     register,
+    login,
     logout() {
       setUser(null);
     },
