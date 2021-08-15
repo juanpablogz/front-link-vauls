@@ -1,9 +1,12 @@
 import React from 'react'
+import { Landing } from '../components/Landing'
+import { Navbar } from '../components/Navbar'
 
 export const index = () => {
   return (
     <div>
-      <h1>soy index</h1>
+      <Navbar/>
+      <Landing/>
     </div>
   )
 }

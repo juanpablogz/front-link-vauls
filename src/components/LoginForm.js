@@ -6,7 +6,7 @@ import useAuth from "../auth/useAuth";
 import { useHistory } from "react-router-dom";
 
 export const LoginForm = () => {
-  const {login, logout} = useAuth();
+  const { login } = useAuth();
   const history = useHistory();
   const onFinish = (user) => {
     console.log("Success:", user);
@@ -58,10 +58,10 @@ export const LoginForm = () => {
 
               <Form.Item>
                 <Button type="primary" htmlType="submit" size="large">
-                  Submit
+                  Sign In
                 </Button>
               </Form.Item>
-              <Divider><p onClick={handleRedirect}>Login</p></Divider>
+              <Divider><p onClick={handleRedirect}>Register</p></Divider>
           </Form>
         </div>
 

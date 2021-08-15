@@ -6,7 +6,7 @@ import useAuth from "../auth/useAuth";
 import { useHistory } from "react-router-dom";
 
 export const RegisterForm = () => {
-  const {register, logout} = useAuth();
+  const {register} = useAuth();
   const history = useHistory();
   const onFinish = (user) => {
     console.log("Success:", user);
@@ -68,7 +68,7 @@ export const RegisterForm = () => {
 
               <Form.Item>
                 <Button type="primary" htmlType="submit" size="large">
-                  Submit
+                  Create account
                 </Button>
               </Form.Item>
               <Divider><p onClick={handleRedirect}>Login</p></Divider>

@@ -1,0 +1,62 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200&display=swap'); */
+body {
+  /* font-family: 'karla', sans-serif; */
+}
+ul {
+  display: flex;
+  list-style: none;
+  margin-left: 100px;
+
+}
+li {
+  padding: 32px;
+}
+.logo-nav {
+  position: absolute;
+  margin-top: -45px;
+  width: 170px;
+}
+a {
+  color: black;
+}
+a:hover {
+  color: black;
+}
+.button-signup {
+  background: rgb(57,224,155);
+  padding: 10px;
+  border-radius: 8px;
+}
+.get-started {
+  background: #7551E9;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+.title {
+  font-size: 64px;
+}
+.subtitle {
+  font-size: 24px;
+}
+.container-landing {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 280px) {
+
+}
+@media (min-width: 320px) {
+
+}
+@media (min-width: 360px) {
+
+}
+@media (min-width: 575px) {
+
+}
+@media (min-width: 1024px) {
+
+}

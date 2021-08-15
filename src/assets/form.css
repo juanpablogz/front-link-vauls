@@ -1,6 +1,3 @@
-h1 {
-  color: red;
-}
 .gutter-box {
   padding: 8px 0;
   background: #00a0e9;
@@ -35,18 +32,7 @@ h1 {
 p {
   cursor: pointer
 }
-#logo {
-  -webkit-animation: rotation 2s infinite linear;
-}
 
-@-webkit-keyframes rotation {
-  from {
-      -webkit-transform: rotate(0deg);
-  }
-  to {
-      -webkit-transform: rotate(359deg);
-  }
-}
 @media (min-width: 280px) {
   .form {
     min-width: 200px;
