@@ -25,7 +25,7 @@ export default function AppRouter() {
             <PrivateRoute exact path="/home" component={Home}/>
             <PublicRoute exact path="/login" component={Login}/>
             <PublicRoute exact path="/login" component={Login}/>
-            <PrivateRoute exact path="/:username" component={ProfilePage}/>
+            <PublicRoute exact path="/:username" component={ProfilePage}/>
           </Switch>
         </AppProvider>
       </AuthProvider>
