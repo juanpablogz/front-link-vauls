@@ -8,7 +8,6 @@ export const Preview = () => {
   console.log(url)
   return (
     <div>
-      {process.env.NODE_ENV }
       <a href={url} target="_blank">my linktree: https://linkvauls.com/{username}</a>
 
       <PreviewLink/>

@@ -11,7 +11,7 @@ const AuthProvider = ({ children }) => {
   const getAllLinks = async () => {
     try {
       const response = await axios.get(
-        `${ process.env.REACT_APP_URL_DEVELOPMENT }links/`,{ headers: user }
+        `links`,{ headers: user }
       );
       setLinks(response.data)
     } catch (error) {
@@ -24,7 +24,7 @@ const AuthProvider = ({ children }) => {
     console.log(link);
     try {
       const response = await axios.post(
-        `${ process.env.REACT_APP_URL_DEVELOPMENT }links/`, link,{ headers: user }
+        `links/`, link,{ headers: user }
       );
       console.log(response);
       getAllLinks()

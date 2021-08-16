@@ -18,7 +18,7 @@ const AuthProvider = ({ children }) => {
       localStorage.setItem("username", JSON.stringify(username));
     } catch (error) {
       localStorage.removeItem("user");
-      localStorage.removeItem("username");
+      localStorage.removeItem("user");
       console.log(error);
     }
   }, [user, username]);
@@ -31,7 +31,7 @@ const AuthProvider = ({ children }) => {
     };
     console.log(user);
     try {
-      const response = await axios.post(`${ process.env.REACT_APP_URL_DEVELOPMENT }users/`, {user});
+      const response = await axios.post(`users`, {user});
       console.log(response);
       setUser(response.headers)
       setUsername(response.data.user.username)
@@ -48,7 +48,7 @@ const AuthProvider = ({ children }) => {
     };
     console.log(user);
     try {
-      const response = await axios.post(`${ process.env.REACT_APP_URL_DEVELOPMENT }users/sign_in`, {user} );
+      const response = await axios.post(`users/sign_in`, {user} );
       console.log(response);
       setUser(response.headers)
       setUsername(response.data.user.username)
