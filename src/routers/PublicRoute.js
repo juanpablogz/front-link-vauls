@@ -6,7 +6,8 @@ export const PublicRoute = ({ component: Component, ...rest }) => {
   const { user } = useAuth();
   return (
     <Route {...rest}>
-      {user ? <Redirect to="/home" /> : <Component /> }
+      {/* {user ? <Redirect to="/home" /> : <Component /> } */}
+      <Component /> 
     </Route>
   );
 };
